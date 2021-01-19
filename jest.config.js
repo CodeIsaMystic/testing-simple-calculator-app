@@ -8,9 +8,12 @@ module.exports = {
   displayName: 'calculator',
   testEnvironment: 'jsdom',
   testURL: 'http://localhost',
+  /* Take care of any polyphills */
   setupTestFrameworkScriptFile: require.resolve(
     './test/setup-test-framework.js',
   ),
+  /* Support any loaders used with Babel: 
+  graphQl, CSS, CSS Module...  */
   moduleNameMapper: {
     /* 
      module must come first
@@ -28,6 +31,7 @@ module.exports = {
 // do it inline like I show above :)
 if (process.cwd() === __dirname) {
   Object.assign(module.exports, {
+    /* coverage path  */
     collectCoverageFrom: ['**/src/**/*.js'],
     coverageThreshold: {
       global: {

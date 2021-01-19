@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import AutoScalingText from '../auto-scaling-text'
+import Calculator from '../calculator'
 
 test('mounts', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<AutoScalingText />, div)
-  //console.log(div.innerHTML)
+  ReactDOM.render(<Calculator />, div)
 })

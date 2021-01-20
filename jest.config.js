@@ -22,8 +22,10 @@ module.exports = {
     '\\.css$': require.resolve('./test/style-mock.js'),
     // can also map files that are loaded by webpack with the file-loader
   },
+  // In case we handle the back & frontend on a single repo 
+  //projects: ['./client', './server']
   // normally you'd put this here
-  // collectCoverageFrom: ['**/src/**/*.js'],
+  //collectCoverageFrom: ['**/src/**/*.js']
 }
 
 // however, that kinda messes up my setup in this workshop repo
